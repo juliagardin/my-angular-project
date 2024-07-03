@@ -4,6 +4,7 @@ html,
 body {
   height: 100%;
   width: 100%;
+  scroll-behavior: smooth;
 }
 
 .vert-text {
@@ -22,11 +23,10 @@ body {
 
 /* Side Menu */
 
-#sidebar-wrapper {
-  margin-right: -250px;
+.sidebar-wrapper {
   right: 0;
   width: 250px;
-  background: #000;
+  background: #212121;
   position: fixed;
   height: 100%;
   overflow-y: auto;
@@ -123,12 +123,14 @@ body {
 
 .intro {
   padding: 50px 0;
+  background:#7AA2C4;
+  color:#ffffff;
 }
 
 /* Services */
 
 .services {
-  background: #7fbbda;
+  background: #23395d;
   padding: 50px 0;
   color: #ffffff;
 }

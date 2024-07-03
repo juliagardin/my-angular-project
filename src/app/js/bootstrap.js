@@ -1,3 +1,4 @@
+
 /*!
  * Bootstrap v3.0.2 by @fat and @mdo
  * Copyright 2013 Twitter, Inc.
@@ -220,7 +221,6 @@ if (typeof jQuery === "undefined") { throw new Error("Bootstrap requires jQuery"
 
   Button.prototype.toggle = function () {
     var $parent = this.$element.closest('[data-toggle="buttons"]')
-
     if ($parent.length) {
       var $input = this.$element.find('input')
         .prop('checked', !this.$element.hasClass('active'))
