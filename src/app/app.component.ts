@@ -3,6 +3,8 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { trigger, state, style, transition, animate } from '@angular/animations';
+import {MatSelectModule} from '@angular/material/select';
+import {MatFormFieldModule} from '@angular/material/form-field';
 
 @Component({
   selector: 'app-root',
@@ -10,7 +12,9 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
   host: {ngSkipHydration: 'true'},
   imports: [RouterOutlet, 
             MatSidenavModule,
-            MatButtonModule],
+            MatButtonModule,
+            MatSelectModule,
+            MatFormFieldModule],
   templateUrl: './app.component.html',
   styleUrl:'./app.component.css',
   animations: [
@@ -24,19 +28,20 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
       transition('in => out', animate('400ms ease-in-out')),
       transition('out => in', animate('400ms ease-in-out'))
     ]),
-    //trigger('smoothScroll'
-
-   // )
   ]
 })
 export class AppComponent {
   title = 'First Project';
 
-  menuState:string ='out';
+  menuState ='out';  
 
-  toggleMenu(){
-    this.menuState = this.menuState === 'out' ? 'in' : 'out';
+  tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor"];
+  selectedTicket:string;
+
+  constructor(){
+    this.selectedTicket = "";
   }
-
-  
+  toggleAnimation() {
+    this.menuState = this.menuState === 'in' ? 'out' : 'in';
+  }
 }

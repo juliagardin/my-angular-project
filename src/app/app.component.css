@@ -151,6 +151,59 @@ i.service-icon {
   text-align: center;
 }
 
+.jira-service-icon {
+  background: url('images/jiraLogo.png') no-repeat center center; 
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.gitlab-service-icon {
+  background: url('images/gitlab.png') no-repeat center center; 
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.mattermost-service-icon {
+  background: url('images/mattermost.png') no-repeat center center; 
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+.confluence-service-icon {
+  background: url('images/confluence.png') no-repeat center center; 
+  border: 3px solid #ffffff;
+  border-radius: 50%;
+  display: inline-block;
+  font-size: 56px;
+  width: 140px;
+  height: 140px;
+  line-height: 136px;
+  vertical-align: middle; 
+  text-align: center;
+}
+
+
 /* Callout */
 
 .callout {
@@ -166,6 +219,10 @@ i.service-icon {
 }
 
 /* Portfolio */
+
+.portfolio-dropdown{
+  width: 750px;
+}
 
 .portfolio {
   padding: 50px 0;
