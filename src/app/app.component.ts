@@ -5,6 +5,7 @@ import { MatSidenavModule } from '@angular/material/sidenav';
 import { trigger, state, style, transition, animate } from '@angular/animations';
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
+import { NgIf } from '@angular/common';
 
 @Component({
   selector: 'app-root',
@@ -14,7 +15,8 @@ import {MatFormFieldModule} from '@angular/material/form-field';
             MatSidenavModule,
             MatButtonModule,
             MatSelectModule,
-            MatFormFieldModule],
+            MatFormFieldModule,
+            NgIf],
   templateUrl: './app.component.html',
   styleUrl:'./app.component.css',
   animations: [
@@ -38,9 +40,12 @@ export class AppComponent {
   tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor"];
   selectedTicket:string;
 
+  APARMSfe = "images/APARMSfe.png";
+
   constructor(){
     this.selectedTicket = "";
   }
+
   toggleAnimation() {
     this.menuState = this.menuState === 'in' ? 'out' : 'in';
   }
