@@ -188,18 +188,19 @@
           <div style="float:right"> 
             <h4>Description</h4> 
             <hr>
-              This was the second ticket that Marcus and I did together. The purpose of this was to fix a bug that wrapped the selection box around the globe instead of crossing the IDL. 
-              IDL issues are very common in Cesium (the globe renderer) because there is a seam in the globe that allows the user to switch between 2D and 3D. 
+              This was the first ticket I did on my own. The goal was to make this section of the chart overlays panel more clear that it controlled one layer, and make it possible to have 
+              both readouts toggled at once. I got a lot of feeback on this ticket, and the final product ended up to be very similar to my initial design. 
             <hr style="visibility: hidden;">
             <h4>Process</h4>
             <hr>
-              The first thing we did was find where the mouse actions were stored, and what was causing the issue. Cesium was rendering the rectangle with the exact coordinates, without considering the shortest route.  
-              To fix this we tracked the exact conditions where the box would cross the IDL, and swapped the east and west boundaries. We also made sure that this did not break across the prime meridian, since they had similar cases. 
+              The first thing I did was put the readouts under an expanded dropdown for the specific bottom contours. While this took up more room, thought it was more intuitive
+              since multiple contours can be selected. My PR got some feedback that I should not have expanded the dropdown to match the overall design, and that I should also change the radio buttons to be
+              checkboxes.  
             <hr style="visibility: hidden;">
             <h4>What I learned</h4>
               <hr>
-              For this ticket, I learned about the built-in Cesium libraries that made it eay to render polygons and layers on the Cesium map. From reasearching similar issues, I found that there was no way to fix the small pixel jump
-              at the IDL, since it is an issue with Cesium, and we cannot work around it. This also applies to the entity icons and smaller selection boxes around them. 
+              For this ticket, I learned a little more about how CSS and HTML are connected. The style used for all of the rows is a "denseFormFieldRow" from an SCSS. At first, I deleted this class
+              and favored a larger design, but since it didn't match, I changed it back.  (or rather... Kyle did)
           </div>
         </div>
        </div>
