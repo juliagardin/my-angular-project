@@ -203,6 +203,30 @@
               and favored a larger design, but since it didn't match, I changed it back.  (or rather... Kyle did)
           </div>
         </div>
+        <div *ngIf="selectedTicket === 'APARMS Refactor'" class="portfolio-container"> 
+          <div>
+            <h3>Bottom Contours GUI Redesign</h3>
+            <hr style="visibility: hidden;">
+            <img class="img-portfolio"  src="../assets/images/BCupdate3.png"/>
+          </div>
+          <div style="float:right"> 
+            <h4>Description</h4> 
+            <hr>
+              This was the first ticket I did on my own. The goal was to make this section of the chart overlays panel more clear that it controlled one layer, and make it possible to have 
+              both readouts toggled at once. I got a lot of feeback on this ticket, and the final product ended up to be very similar to my initial design. 
+            <hr style="visibility: hidden;">
+            <h4>Process</h4>
+            <hr>
+              The first thing I did was put the readouts under an expanded dropdown for the specific bottom contours. While this took up more room, thought it was more intuitive
+              since multiple contours can be selected. My PR got some feedback that I should not have expanded the dropdown to match the overall design, and that I should also change the radio buttons to be
+              checkboxes.  
+            <hr style="visibility: hidden;">
+            <h4>What I learned</h4>
+              <hr>
+              For this ticket, I learned a little more about how CSS and HTML are connected. The style used for all of the rows is a "denseFormFieldRow" from an SCSS. At first, I deleted this class
+              and favored a larger design, but since it didn't match, I changed it back.  (or rather... Kyle did)
+          </div>
+        </div>
        </div>
     </div>
     <!-- /Portfolio -->
