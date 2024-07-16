@@ -28,7 +28,7 @@
   </mat-drawer-container>
 
     
-    <button id="menu-toggle" style= "color:white;" class="btn-primary btn-default btn-lg" mat-button (click)="toggleAnimation()">Menu</button>
+    <button id="menu-toggle" style= "color:white;" class="btn-primary btn-default btn-lg" mat-button (click)="toggleAnimation()"><img src="../assets/images/hamburger.png" style="height: 30px; width: 30px;"></button>
     
     <!-- /Side Menu -->
   
@@ -129,13 +129,77 @@
             </mat-form-field>
           </div>
         </div>
-        <div *ngIf="selectedTicket === 'APARMS Front-End'" class="portfolio-item"> 
-          <h3>APARMS Front-End (with Marcus)</h3>
+        <div *ngIf="selectedTicket === 'APARMS Front-End'" class="portfolio-container"> 
           <div>
+            <h3>APARMS Front-End (with Marcus)</h3>
             <img class="img-portfolio" style="float:left" src="../assets/images/APARMSfe.png"/>
           </div>
-          <div style="float: left;">
-            <p>RRRRRRRRRRAAAAAAAAAAAAAAAAAHHHHHHHHHHHHHHHH</p>
+          <div style="float:right"> 
+            <h4>Description</h4> 
+            <hr>
+              This was the first ticket that Marcus and I did together. The purpose of this was to create and design the front-end toggle for the APARMS (Acoustic Parameters) layers.
+              Since there was no database, configuration, and implementation for the layers, there was no wiring to the backend. The goal of this task was to provide a visual for how the layers will be toggled.
+            <hr style="visibility: hidden;">
+            <h4>Process</h4>
+            <hr>
+              The first thing we did was find where CTDA (Combat Tactical Decision Aid), another group who shares code, kept their implementation for the APARMS layers.
+              We then used that information to create an enum of the available APARMS and had the dropdown menu loop through that when it was displayed. This helped make the layers configuareable in the future. 
+            <hr style="visibility: hidden;">
+            <h4>What I learned</h4>
+              <hr>
+              Since this was our first exposure to DevOps and the shared code between CTDA and AIC, I learned a lot about the general processes for development, such as: tracking progress in Jira,
+              how code is shared between projects, how to naviagte the shared code, tracking updates with changelogs and version numbers, getting approvals from code-owners and other devs.               
+              This was also my first time coding in Angular, so I was exposed to the many features, such as: front and back-end connections, *ngFor and *ngIf, Angular materials to make styling easier.
+          </div>
+        </div>
+        <div *ngIf="selectedTicket === 'IDL Select Box Bug'" class="portfolio-container"> 
+          <div>
+            <h3>International Date Line Multi-Select Box Bug (with Marcus)</h3>
+            <hr style="visibility: hidden;">
+            <h4>Before: </h4> 
+            <img class="img-portfolio" style="width:400px; height: 300px;" src="../assets/images/IDLBug.png"/>
+            <hr style="visibility: hidden;">
+            <h4>After: </h4>    
+            <img class="img-portfolio" style="width:400px;height:300px;" src="../assets/images/IDLFix.png"/>
+          </div>
+          <div style="float:right"> 
+            <h4>Description</h4> 
+            <hr>
+              This was the second ticket that Marcus and I did together. The purpose of this was to fix a bug that wrapped the selection box around the globe instead of crossing the IDL. 
+              IDL issues are very common in Cesium (the globe renderer) because there is a seam in the globe that allows the user to switch between 2D and 3D. 
+            <hr style="visibility: hidden;">
+            <h4>Process</h4>
+            <hr>
+              The first thing we did was find where the mouse actions were stored, and what was causing the issue. Cesium was rendering the rectangle with the exact coordinates, without considering the shortest route.  
+              To fix this we tracked the exact conditions where the box would cross the IDL, and swapped the east and west boundaries. We also made sure that this did not break across the prime meridian, since they had similar cases. 
+            <hr style="visibility: hidden;">
+            <h4>What I learned</h4>
+              <hr>
+              For this ticket, I learned about the built-in Cesium libraries that made it eay to render polygons and layers on the Cesium map. From reasearching similar issues, I found that there was no way to fix the small pixel jump
+              at the IDL, since it is an issue with Cesium, and we cannot work around it. This also applies to the entity icons and smaller selection boxes around them. 
+          </div>
+        </div>
+        <div *ngIf="selectedTicket === 'Bottom Contours GUI'" class="portfolio-container"> 
+          <div>
+            <h3>Bottom Contours GUI Redesign</h3>
+            <hr style="visibility: hidden;">
+            <img class="img-portfolio"  src="../assets/images/BCupdate3.png"/>
+          </div>
+          <div style="float:right"> 
+            <h4>Description</h4> 
+            <hr>
+              This was the second ticket that Marcus and I did together. The purpose of this was to fix a bug that wrapped the selection box around the globe instead of crossing the IDL. 
+              IDL issues are very common in Cesium (the globe renderer) because there is a seam in the globe that allows the user to switch between 2D and 3D. 
+            <hr style="visibility: hidden;">
+            <h4>Process</h4>
+            <hr>
+              The first thing we did was find where the mouse actions were stored, and what was causing the issue. Cesium was rendering the rectangle with the exact coordinates, without considering the shortest route.  
+              To fix this we tracked the exact conditions where the box would cross the IDL, and swapped the east and west boundaries. We also made sure that this did not break across the prime meridian, since they had similar cases. 
+            <hr style="visibility: hidden;">
+            <h4>What I learned</h4>
+              <hr>
+              For this ticket, I learned about the built-in Cesium libraries that made it eay to render polygons and layers on the Cesium map. From reasearching similar issues, I found that there was no way to fix the small pixel jump
+              at the IDL, since it is an issue with Cesium, and we cannot work around it. This also applies to the entity icons and smaller selection boxes around them. 
           </div>
         </div>
        </div>

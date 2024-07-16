@@ -236,6 +236,13 @@ i.service-icon {
   margin: 0 auto;
 }
 
+.portfolio-container{
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
 
 /* Call to Action */
 
