@@ -205,26 +205,25 @@
         </div>
         <div *ngIf="selectedTicket === 'APARMS Refactor'" class="portfolio-container"> 
           <div>
-            <h3>Bottom Contours GUI Redesign</h3>
+            <h3>APARMS Front-End and Config Refactor</h3>
             <hr style="visibility: hidden;">
-            <img class="img-portfolio"  src="../assets/images/BCupdate3.png"/>
+            <img class="img-portfolio"  src="../assets/images/aparmsRefector.png"/>
           </div>
           <div style="float:right"> 
             <h4>Description</h4> 
             <hr>
-              This was the first ticket I did on my own. The goal was to make this section of the chart overlays panel more clear that it controlled one layer, and make it possible to have 
-              both readouts toggled at once. I got a lot of feeback on this ticket, and the final product ended up to be very similar to my initial design. 
+             This was a subtask on a larger ticket to display and complete the APARMS functionality. My task was to clarify the front-end to make wiring to the back-end more seamless. 
+             This included adding tooltips to the dropdown options with the non-abbreviated name of the layer, and making the options configurable from a Drydock .yaml file. 
             <hr style="visibility: hidden;">
             <h4>Process</h4>
             <hr>
-              The first thing I did was put the readouts under an expanded dropdown for the specific bottom contours. While this took up more room, thought it was more intuitive
-              since multiple contours can be selected. My PR got some feedback that I should not have expanded the dropdown to match the overall design, and that I should also change the radio buttons to be
-              checkboxes.  
+              The first thing I did was research and add the tooltips to the options, which required me to find the full names of the abbreviations from CTDA's code. Since they hadn't been configured yet, 
+              I added a method with a switch case to handle which name was displayed in the tootltip. Then I worked with Bobby to configure the layers from Drydock and make it readable. 
             <hr style="visibility: hidden;">
             <h4>What I learned</h4>
               <hr>
-              For this ticket, I learned a little more about how CSS and HTML are connected. The style used for all of the rows is a "denseFormFieldRow" from an SCSS. At first, I deleted this class
-              and favored a larger design, but since it didn't match, I changed it back.  (or rather... Kyle did)
+              For this ticket, I learned a lot about how to navigate and edit with vim. There are many shortcuts to editing these files without needing to exit the terminal, 
+              the only downside is learning all of the commands. This also introduced me to how the two repos are connected and how they interact with databases to get the layers. 
           </div>
         </div>
        </div>
