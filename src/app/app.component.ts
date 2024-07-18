@@ -37,7 +37,7 @@ export class AppComponent {
 
   menuState ='out';  
 
-  tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor"];
+  tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor", "Detections Type Addition and Testing"];
   selectedTicket:string;
 
   APARMSfe = "images/APARMSfe.png";

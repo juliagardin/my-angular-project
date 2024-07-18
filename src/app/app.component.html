@@ -226,6 +226,31 @@
               the only downside is learning all of the commands. This also introduced me to how the two repos are connected and how they interact with databases to get the layers. 
           </div>
         </div>
+        <div *ngIf="selectedTicket === 'Detections Type Addition and Testing'" class="portfolio-container"> 
+          <div>
+            <h3>Detections Type Addition and Testing</h3>
+            <hr style="visibility: hidden;">
+            <img class="img-portfolio" src="../assets/images/probabilityOfDetectionTable.png">
+          </div>
+          <div style="float:right"> 
+            <h4>Description</h4> 
+            <hr>
+             This was a subtask on a larger ticket to add a new field to the probability of detection features. The new detection type specifies if the reason for detection was from the line of sight,
+             range, passive narrowband, passive narrowband transient, passive broadband, or passive transient. Each of these types specifies how the target was detected and what sensors were used. 
+             This variable had to be added and transferred between the probability-of-detection-driver, the probability-of-detection-calculator, and the probability-of-detection-service pods to be fully implemented. 
+            <hr style="visibility: hidden;">
+            <h4>Process</h4>
+            <hr>
+              The first thing I did with Bradley was discuss what the new variable would be called, at the time both sensingMethod and detectionType existsed, so we decided on detectionCause. Once I put up my merge request
+              one of the other developers asked what the difference was between the two variables. Turns out that sensingMethod and detectionType were the same thing, and I updated my merge request to refactor those variable names
+              and changed detectionCause to detectionType. To test that the changes were parsed through all the files, I used kubernetes commands to track and increase logs to find the added field. 
+            <hr style="visibility: hidden;">
+            <h4>What I learned</h4>
+              <hr>
+              For this task, I learned a lot about how the pods interact with each other and how to use pods that were running. I ran into a big problem whan I needed to update my repos, the IDs did not 
+              match up between the similation data creator and the driver pods. To fix this, I had to edit both the configmap in the driver pod and fix Node-Red, luckily I had help to figure this out. 
+          </div>
+        </div>
        </div>
     </div>
     <!-- /Portfolio -->
