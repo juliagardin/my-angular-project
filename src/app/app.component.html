@@ -259,29 +259,22 @@
     <div class="call-to-action">
       <div class="container">
         <div class="row">
-          <div class="col-md-6 col-md-offset-3 text-center">
             <p-carousel 
             [value]="devOpsTools"
             [numVisible]="3" 
-            [numScroll]="1" 
+            [numScroll]="2" 
             [circular]="true" 
             [responsiveOptions]="responsiveOptions" 
-            autoplayInterval="3000">
+            autoplayInterval="6000">
                 <ng-template let-tool pTemplate="item">
                         <div class="border-1 surface-border border-round m-2 p-3">
                             <div class="mb-3">
                                 <div class="relative mx-auto">
                                     <img 
-                                        src="assets/images/ticket.png"
+                                        src="assets/images/APARMSfe.png"
                                         [alt]="tool" 
                                         class="w-full border-round" />
-                                    <p-tag 
-                                            class="absolute" 
-                                        [ngStyle]="{ 'left.px': 5, 'top.px': 5 }" />
                                 </div>
-                            </div>
-                            <div class="mb-3 font-medium">
-                                {{ tool }}
                             </div>
                         </div>
                 </ng-template>
@@ -290,7 +283,6 @@
           </div>
         </div>
       </div>
-    </div>
     <!-- /Call to Action -->
 
     <!-- Map -->
