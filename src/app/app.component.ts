@@ -6,6 +6,7 @@ import { trigger, state, style, transition, animate } from '@angular/animations'
 import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
+import { CarouselModule } from 'primeng/carousel';
 
 @Component({
   selector: 'app-root',
@@ -16,7 +17,8 @@ import { NgIf } from '@angular/common';
             MatButtonModule,
             MatSelectModule,
             MatFormFieldModule,
-            NgIf],
+            NgIf,
+            CarouselModule],
   templateUrl: './app.component.html',
   styleUrl:'./app.component.css',
   animations: [
@@ -38,9 +40,12 @@ export class AppComponent {
   menuState ='out';  
 
   tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor", "Detections Type Addition and Testing"];
-  selectedTicket:string;
+  selectedTicket:string ="";
 
   APARMSfe = "images/APARMSfe.png";
+
+  devOpsTools: string[]= ["Docker", "Kubernetes", "Git", "Linux", "Angular", "Jenkins", "Gradle"];
+
 
   constructor(){
     this.selectedTicket = "";
@@ -48,5 +53,28 @@ export class AppComponent {
 
   toggleAnimation() {
     this.menuState = this.menuState === 'in' ? 'out' : 'in';
+  }
+
+  responsiveOptions: any[] | undefined;
+
+  ngOnInit() {
+
+      this.responsiveOptions = [
+          {
+              breakpoint: '1199px',
+              numVisible: 1,
+              numScroll: 1
+          },
+          {
+              breakpoint: '991px',
+              numVisible: 2,
+              numScroll: 1
+          },
+          {
+              breakpoint: '767px',
+              numVisible: 1,
+              numScroll: 1
+          }
+      ];
   }
 }
