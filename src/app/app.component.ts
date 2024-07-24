@@ -44,7 +44,7 @@ export class AppComponent {
 
   APARMSfe = "images/APARMSfe.png";
 
-  devOpsTools: string[]= ["Docker", "Kubernetes", "Git", "Linux", "Angular", "Jenkins", "Gradle"];
+  devOpsTools: string[]= ["docker", "kubernetes", "git", "linux", "angular", "jenkins", "gradle"];
 
 
   constructor(){

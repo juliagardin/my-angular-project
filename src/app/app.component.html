@@ -113,7 +113,7 @@
         <div class="row">
           <div class="col-md-4 col-md-offset-4 text-center">
             <h2>My Work</h2>
-            <hr>
+            <hr style="border-color:black">
           </div>
         </div>
          <div class="row">
@@ -136,7 +136,7 @@
           </div>
           <div style="float:right"> 
             <h4>Description</h4> 
-            <hr>
+            <hr >
               This was the first ticket that Marcus and I did together. The purpose of this was to create and design the front-end toggle for the APARMS (Acoustic Parameters) layers.
               Since there was no database, configuration, and implementation for the layers, there was no wiring to the backend. The goal of this task was to provide a visual for how the layers will be toggled.
             <hr style="visibility: hidden;">
@@ -259,10 +259,15 @@
     <div class="call-to-action">
       <div class="container">
         <div class="row">
+          <div class="col-md-4 col-md-offset-4 text-center">
+            <h2>DevOps Tools</h2>
+            <hr>
+          </div>
+          </div>
             <p-carousel 
             [value]="devOpsTools"
-            [numVisible]="3" 
-            [numScroll]="2" 
+            [numVisible]="1" 
+            [numScroll]="1" 
             [circular]="true" 
             [responsiveOptions]="responsiveOptions" 
             autoplayInterval="6000">
@@ -271,7 +276,7 @@
                             <div class="mb-3">
                                 <div class="relative mx-auto">
                                     <img 
-                                        src="assets/images/APARMSfe.png"
+                                        src="assets/images/{{ tool }}.png"
                                         [alt]="tool" 
                                         class="w-full border-round" />
                                 </div>
@@ -282,7 +287,6 @@
         
           </div>
         </div>
-      </div>
     <!-- /Call to Action -->
 
     <!-- Map -->
@@ -305,7 +309,7 @@
               <li><i class="fa fa-dribbble fa-3x"></i></li>
             </ul>
             <div class="top-scroll">
-              <a href="#top"><i class="fa fa-circle-arrow-up scroll fa-4x"></i></a>
+              <a href="#top"><img src="assets/images/ticket.png"></a>
             </div>
             <hr>
             <p>Copyrighted if I could afford it... &copy; Julia Gardiner 2024</p>

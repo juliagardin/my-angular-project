@@ -226,6 +226,12 @@ i.service-icon {
 
 .portfolio {
   padding: 50px 0;
+  background-color: #ffffff;
+    font-size: 16px;
+}
+
+.portfolio hr{
+  border-top: 1px solid black;
 }
 
 .portfolio-item {
@@ -247,7 +253,7 @@ i.service-icon {
 /* Call to Action */
 
 .call-to-action {
-  color: #ffffff;
+  color:#ffffff;
   background: #7AA2C4;
   padding: 50px 0;
 }
