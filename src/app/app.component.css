@@ -38,6 +38,10 @@ body {
   transition: all 0.4s ease 0s;
 }
 
+.sidebar-btn {
+  background:transparent;
+}
+
 .sidebar-nav {
   position: absolute;
   top: 0;
@@ -262,6 +266,14 @@ i.service-icon {
   margin: 10px;
 }
 
+/* Charts*/
+.charts {
+  background: #23395d;
+  padding: 50px 0;
+  color: #ffffff;
+  display: grid;
+}
+
 /* Map */
 
 .map {
@@ -272,6 +284,10 @@ i.service-icon {
 
 footer {
   padding: 100px 0;
+}
+
+.image-blurred-edge {
+  box-shadow: 0 0 8px 8px black inset;
 }
 
 .top-scroll {

@@ -7,6 +7,8 @@ import {MatSelectModule} from '@angular/material/select';
 import {MatFormFieldModule} from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
+import { BaseChartDirective } from 'ng2-charts';
+import { ChartModule } from 'primeng/chart';
 
 @Component({
   selector: 'app-root',
@@ -18,7 +20,9 @@ import { CarouselModule } from 'primeng/carousel';
             MatSelectModule,
             MatFormFieldModule,
             NgIf,
-            CarouselModule],
+            CarouselModule,
+            ChartModule,
+            BaseChartDirective],
   templateUrl: './app.component.html',
   styleUrl:'./app.component.css',
   animations: [
@@ -46,9 +50,25 @@ export class AppComponent {
 
   devOpsTools: string[]= ["docker", "kubernetes", "git", "linux", "angular", "jenkins", "gradle"];
 
+  data:any;
+
 
   constructor(){
-    this.selectedTicket = "";
+    this.selectedTicket = "APARMS Front-End";
+
+    this.data = {
+      labels: ['January', 'February', 'March', 'April', 'May', 'June', 'July'],
+      datasets: [
+          {
+              label: 'First Dataset',
+              data: [65, 59, 80, 81, 56, 55, 40]
+          },
+          {
+              label: 'Second Dataset',
+              data: [28, 48, 40, 19, 86, 27, 90]
+          }
+        ]
+      }
   }
 
   toggleAnimation() {

@@ -1,3 +1,11 @@
+Welcome to my first trial in Angular and some of the libraries that go with it!
+The purpose of this is to get more experience with the framework and show off some of my work at my first internship!
+
+Dependencies:
+Angular 18.0.3
+PrimeNG Library
+Chart.js (eventually)
+
 # MyAngularProject
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
