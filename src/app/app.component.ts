@@ -3,12 +3,13 @@ import { RouterOutlet } from '@angular/router';
 import { MatButtonModule } from '@angular/material/button';
 import { MatSidenavModule } from '@angular/material/sidenav';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import {MatSelectModule} from '@angular/material/select';
-import {MatFormFieldModule} from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatFormFieldModule } from '@angular/material/form-field';
 import { NgIf } from '@angular/common';
 import { CarouselModule } from 'primeng/carousel';
 import { BaseChartDirective } from 'ng2-charts';
 import { ChartModule } from 'primeng/chart';
+import { MatExpansionModule } from '@angular/material/expansion';
 
 @Component({
   selector: 'app-root',
@@ -22,7 +23,9 @@ import { ChartModule } from 'primeng/chart';
             NgIf,
             CarouselModule,
             ChartModule,
-            BaseChartDirective],
+            BaseChartDirective,
+            MatExpansionModule
+          ],
   templateUrl: './app.component.html',
   styleUrl:'./app.component.css',
   animations: [
@@ -43,7 +46,14 @@ export class AppComponent {
 
   menuState ='out';  
 
-  tickets:string[]=["APARMS Front-End","IDL Select Box Bug", "Bottom Contours GUI", "APARMS Refactor", "Detections Type Addition and Testing"];
+  tickets:string[]=[
+                    "APARMS Front-End",
+                    "IDL Select Box Bug", 
+                    "Bottom Contours GUI", 
+                    "APARMS Refactor", 
+                    "Detections Type Addition and Testing", 
+                    "Freddies Migration (with Marcus)"
+                  ];
   selectedTicket:string ="";
 
   APARMSfe = "images/APARMSfe.png";

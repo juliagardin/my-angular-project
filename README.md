@@ -4,7 +4,6 @@ The purpose of this is to get more experience with the framework and show off so
 Dependencies:
 Angular 18.0.3
 PrimeNG Library
-Chart.js (eventually)
 
 # MyAngularProject
 

@@ -271,8 +271,17 @@ i.service-icon {
   background: #23395d;
   padding: 50px 0;
   color: #ffffff;
-  display: grid;
+  align-items: center;
 }
+
+.charts p {
+  font-size: 14px;
+}
+
+.mat-expansion-panel-header-title {
+  font-size:14px;
+}
+
 
 /* Map */
 
@@ -286,9 +295,6 @@ footer {
   padding: 100px 0;
 }
 
-.image-blurred-edge {
-  box-shadow: 0 0 8px 8px black inset;
-}
 
 .top-scroll {
   margin-top: 50px;
