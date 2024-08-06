@@ -91,7 +91,7 @@
             <div class="service-item">
               <a href = "https://www.atlassian.com/software/confluence?&aceid=&adposition=&adgroup=138055852501&campaign=18312196225&creative=656429477701&device=c&keyword=atlassian%20confluence&matchtype=e&network=g&placement=&ds_kids=p72969649868&ds_e=GOOGLE&ds_eid=700000001542923&ds_e1=GOOGLE&gad_source=1&gclid=Cj0KCQjwkdO0BhDxARIsANkNcrcAKtgV0ry1MAZmscieVqUnXqwxfEX7Umk3JlDINqIzVSnnxa6nGg8aAkXKEALw_wcB&gclsrc=aw.ds"><i class="confluence-service-icon"></i></a>
               <h4>Confluence</h4>
-              <p>We've been voted the best pencil sharpening service for 10 consecutive years. If you have a pencil that feels dull, we'll get it sharp!</p>
+              <p>The documentation database for NWSCCD. This is where help sites, diagrams, and meeting notes are held. There are pages for each of the individual prjects and person. </p>
             </div>
           </div>
         </div>
@@ -251,24 +251,23 @@
               match up between the similation data creator and the driver pods. To fix this, I had to edit both the configmap in the driver pod and fix Node-Red, luckily I had help to figure this out. 
           </div>
         </div>
-        <div *ngIf="selectedTicket === 'Freddies MigThisration (with Marcus)'" class="portfolio-container"> 
+        <div *ngIf="selectedTicket === 'Freddies Migration (with Marcus)'" class="portfolio-container"> 
           <div>
-            <h3>Detections Type Addition and Testing</h3>
+            <h3>Freddies Migration (with Marcus)</h3>
             <hr style="visibility: hidden;">
             <img class="img-portfolio" src="../assets/images/freddiesWorks.png">
           </div>
           <div style="float:right"> 
             <h4>Description</h4> 
             <hr>
-             This was a subtask on a larger ticket to add a new field to the probability of detection features. The new detection type specifies if the reason for detection was from the line of sight,
-             range, passive narrowband, passive narrowband transient, passive broadband, or passive transient. Each of these types specifies how the target was detected and what sensors were used. 
-             This variable had to be added and transferred between the probability-of-detection-driver, the probability-of-detection-calculator, and the probability-of-detection-service pods to be fully implemented. 
+             This was a huge ticket that mirgrated the Freddies layer functionality from CTDA. This included the file-manager and geodocument pods, and all of the overlays files. 
+             This put the files into the layer-manager, where they could be displayed, deleted, and favorited. The files are manually uploaded into the file-manager using curl commands
+             where they are then sent to geodocument manager where they are converted into data that can be displayed on the geo. 
             <hr style="visibility: hidden;">
             <h4>Process</h4>
             <hr>
-              The first thing I did with Bradley was discuss what the new variable would be called, at the time both sensingMethod and detectionType existsed, so we decided on detectionCause. Once I put up my merge request
-              one of the other developers asked what the difference was between the two variables. Turns out that sensingMethod and detectionType were the same thing, and I updated my merge request to refactor those variable names
-              and changed detectionCause to detectionType. To test that the changes were parsed through all the files, I used kubernetes commands to track and increase logs to find the added field. 
+              The first thing I helped with investigating where AIC displays their layers and how they ae toggled. We learned that it was from an mqtt subscription to databases, that was toggled from the front end. 
+
             <hr style="visibility: hidden;">
             <h4>What I learned</h4>
               <hr>
@@ -326,15 +325,15 @@
     <div class="charts">
       <div class="row">
         <div class="col-md-4 col-md-offset-4 text-center">
-          <h2>Overall Feedback</h2>
+          <h2>Overall Feedback</h2> 
           <hr>
         </div>
       </div>
       <div class="row">
         <div class="container">
-          <div class="portfolio-container" style="padding-top:15px">
+          <div class="feedback-container">
             <div class="text-center" style="float:left;">
-              <h3>Good things</h3>
+              <h3> Positive </h3>
               <hr>
               <mat-accordion>
               <mat-expansion-panel hideToggle>
@@ -345,21 +344,21 @@
               </mat-expansion-panel>
               <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
-                  <mat-panel-title> Having an office </mat-panel-title>
+                  <mat-panel-title> Having an office and sharing it</mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>It was really nice to have a desk with a monitor, mouse, and keyboard. </p>
+                <p>It was really nice to have a desk with a monitor, mouse, and keyboard. It was also great to bounce ideas off Marcus. </p>
               </mat-expansion-panel>
               <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
                   <mat-panel-title> Schedule flexibility </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>It was aweomse to be able to have my own start and end times. </p>
+                <p>It was aweomse to be able to have my own start and end times and work part time. Especially during the summer. </p>
               </mat-expansion-panel>
               <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
-                  <mat-panel-title> Being in sprints </mat-panel-title>
+                  <mat-panel-title> Access to Confluence </mat-panel-title>
                 </mat-expansion-panel-header>
-                <p>It was interesting to learn and take part in teh development process. </p>
+                <p>It was really helpful to see the documentation for teh different projects. </p>
               </mat-expansion-panel>
               <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
@@ -370,7 +369,7 @@
             </mat-accordion>
             </div>
             <div class="text-center" style="float:right"> 
-              <h3>Not as good things</h3>
+              <h3> Constructive </h3>
               <hr>
               <mat-accordion>
               <mat-expansion-panel hideToggle>
@@ -387,7 +386,7 @@
               </mat-expansion-panel>
               <mat-expansion-panel hideToggle>
                 <mat-expansion-panel-header>
-                  <mat-panel-title> Not going to base </mat-panel-title>
+                  <mat-panel-title> Not going to Carderock </mat-panel-title>
                 </mat-expansion-panel-header>
                 <p> It would've been nice to meet feature tream 2. </p>
               </mat-expansion-panel>

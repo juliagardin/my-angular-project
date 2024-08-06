@@ -282,6 +282,13 @@ i.service-icon {
   font-size:14px;
 }
 
+.feedback-container{
+  display: grid;
+  align-items: top;
+  grid-template-columns: 1fr 1fr;
+  column-gap: 20px;
+}
+
 
 /* Map */
 
