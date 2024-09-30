@@ -24,7 +24,7 @@
               {
                 "glob": "**/*",
                 "input": "public",
-                "output": "/my-angular-project"
+                "output": "/my-angular-project/"
               },
               "src/assets"
             ],
