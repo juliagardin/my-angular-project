@@ -1,15 +1,15 @@
-import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
-import { MatButtonModule } from '@angular/material/button';
-import { MatSidenavModule } from '@angular/material/sidenav';
-import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MatSelectModule } from '@angular/material/select';
-import { MatFormFieldModule } from '@angular/material/form-field';
+import { animate, state, style, transition, trigger } from '@angular/animations';
 import { NgIf } from '@angular/common';
-import { CarouselModule } from 'primeng/carousel';
-import { BaseChartDirective } from 'ng2-charts';
-import { ChartModule } from 'primeng/chart';
+import { Component } from '@angular/core';
+import { MatButtonModule } from '@angular/material/button';
 import { MatExpansionModule } from '@angular/material/expansion';
+import { MatFormFieldModule } from '@angular/material/form-field';
+import { MatSelectModule } from '@angular/material/select';
+import { MatSidenavModule } from '@angular/material/sidenav';
+import { RouterOutlet } from '@angular/router';
+import { BaseChartDirective } from 'ng2-charts';
+import { CarouselModule } from 'primeng/carousel';
+import { ChartModule } from 'primeng/chart';
 
 @Component({
   selector: 'app-root',
@@ -91,17 +91,17 @@ export class AppComponent {
 
       this.responsiveOptions = [
           {
-              breakpoint: '1199px',
+              breakpoint: '700px',
               numVisible: 1,
               numScroll: 1
           },
           {
-              breakpoint: '991px',
+              breakpoint: '600px',
               numVisible: 2,
               numScroll: 1
           },
           {
-              breakpoint: '767px',
+              breakpoint: '500px',
               numVisible: 1,
               numScroll: 1
           }
