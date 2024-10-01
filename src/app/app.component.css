@@ -156,7 +156,7 @@ i.service-icon {
 }
 
 .jira-service-icon {
-  background: url('/assets/images/jiraLogo.png') no-repeat center center; 
+  background: url('/my-angular-project/assets/images/jiraLogo.png') no-repeat center center; 
   border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
@@ -169,7 +169,7 @@ i.service-icon {
 }
 
 .gitlab-service-icon {
-  background: url('/assets/images/gitlab.png') no-repeat center center; 
+  background: url('/my-angular-project/assets/images/gitlab.png') no-repeat center center; 
   border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
@@ -182,7 +182,7 @@ i.service-icon {
 }
 
 .mattermost-service-icon {
-  background: url('/assets/images/mattermost.png') no-repeat center center; 
+  background: url('/my-angular-project/assets/images/mattermost.png') no-repeat center center; 
   border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
@@ -195,7 +195,7 @@ i.service-icon {
 }
 
 .confluence-service-icon {
-  background: url('/assets/images/confluence.png') no-repeat center center; 
+  background: url('/my-angular-project/assets/images/confluence.png') no-repeat center center; 
   border: 3px solid #ffffff;
   border-radius: 50%;
   display: inline-block;
@@ -215,7 +215,7 @@ i.service-icon {
   display: table;
   height: 400px;
   width: 100%;
-  background: url('/assets/images/background.jpg') no-repeat center center fixed; 
+  background: url('/my-angular-project/assets/images/background.jpg') no-repeat center center fixed; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -324,11 +324,11 @@ i.scroll:hover {
 @media (max-width: 768px) {
 	
   .header {
-	background: url('/assets/images/background.jpg') no-repeat center center scroll; 
+	background: url('/my-angular-project/assets/images/background.jpg') no-repeat center center scroll; 
   }
 
   .callout {
-	background: url('/assets/images/background.jpg') no-repeat center center scroll; 
+	background: url('/my-angular-project/assets/images/background.jpg') no-repeat center center scroll; 
   }
 
   .map {
